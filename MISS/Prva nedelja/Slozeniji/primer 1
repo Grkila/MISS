@@ -1,0 +1,8 @@
+using Statistics, LinearAlgebra
+
+function primer1(A)
+    s=mean(A[end,:]) #srednja vrednost poslednje vrste
+    gd=diag(A) #nadji mi dijagonalu
+    v=gd[gd.>0] #daj mi vektor sa svim clanovima dijagonale vece od nule
+    return s, v
+end
